@@ -11,13 +11,16 @@ namespace Employee_Payroll.Repository
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Click Below Options:\n1.CreateDatabase");
+            Console.WriteLine("Click Below Options:\n1.CreateDatabase\n2.CreateTable");
             int option=Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
                 case 1:
                     EmployeeRepository employeeRepository = new EmployeeRepository();
                     employeeRepository.CreateDatabase();
+                    break;
+                case 2:
+                    EmployeeRepository.CreateTable();
                     break;
             }
          
